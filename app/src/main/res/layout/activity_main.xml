@@ -74,6 +74,34 @@
 <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:id="@+id/Loginbutton"
+    android:layout_below="@id/password"
+    android:text="Accedi"
+    android:backgroundTint="@color/button_background_color"
     />
+
+    <TextView
+        android:id="@+id/nonseiid"
+        android:layout_width="381dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/Loginbutton"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Non sei registrato?"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/Registerbutton"
+        android:layout_below="@id/nonseiid"
+        android:text="Registrati"
+        android:backgroundTint="@color/button_background_color"
+        />
 </RelativeLayout>
 
