@@ -12,11 +12,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class editnoteactivity extends AppCompatActivity {
     Intent data;
@@ -33,9 +39,10 @@ public class editnoteactivity extends AppCompatActivity {
         setContentView(R.layout.activity_editnoteactivity);
         medittitle = findViewById(R.id.edittitle);
         meditcontent = findViewById(R.id.editcontent);
+        msaveedit = findViewById(R.id.saveedit);
         data= getIntent();
         firebaseFirestore=FirebaseFirestore.getInstance();
-        firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
+        firebaseUser=firebaseAuth.getInstance().getCurrentUser();
 
         Toolbar toolbar = findViewById(R.id.toolbareditnote);
         setSupportActionBar(toolbar);
@@ -51,8 +58,21 @@ public class editnoteactivity extends AppCompatActivity {
                     return;
                 }else{
                     DocumentReference documentReference = firebaseFirestore.collection("notes").document(firebaseUser.getUid()).collection("myNotes").document(data.getStringExtra("noteID"));
-
-
+                    Map<String, Object>  note = new HashMap<>();
+                    note.put("title",newtitle);
+                    note.put("content",newcontent);
+                    documentReference.set(note).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(getApplicationContext(),"funziona",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(editnoteactivity.this, notesactivity.class));
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getApplicationContext(),"Modifica Fallita",Toast.LENGTH_SHORT).show();
+                        }
+                    });
 
                 }
             }
