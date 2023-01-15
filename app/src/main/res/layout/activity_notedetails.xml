@@ -21,7 +21,7 @@
             android:id="@+id/titlenotedetail"
             />
     </androidx.appcompat.widget.Toolbar>
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="15sp"
@@ -43,6 +43,6 @@
         android:layout_gravity="bottom|end"
         android:id="@+id/gotoedit"
         android:src="@drawable/ic_baseline_edit_24"
-        app:maxImageSize="56dp"/>
+        app:maxImageSize="40dp"/>
 
 </RelativeLayout>

@@ -41,6 +41,6 @@
         android:layout_gravity="bottom|end"
         android:id="@+id/saveedit"
         android:src="@drawable/ic_baseline_cloud_upload_24"
-        app:maxImageSize="56dp"/>
+        app:maxImageSize="40dp"/>
 
 </RelativeLayout>

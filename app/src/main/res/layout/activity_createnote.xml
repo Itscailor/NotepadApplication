@@ -43,6 +43,6 @@
         android:layout_gravity="bottom|end"
         android:id="@+id/savenotefab"
         android:src="@drawable/ic_baseline_save_24"
-        app:maxImageSize="56dp"/>
+        app:maxImageSize="40dp"/>
 
 </RelativeLayout>
