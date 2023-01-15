@@ -1,3 +1,3 @@
 # NotepadApplication
 
-Save your notes
+It just save your notes
