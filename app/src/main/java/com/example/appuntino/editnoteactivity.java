@@ -65,7 +65,7 @@ public class editnoteactivity extends AppCompatActivity {
                     documentReference.set(note).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(getApplicationContext(),"funziona",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"nota aggiornata",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(editnoteactivity.this, notesactivity.class));
                         }
                     }).addOnFailureListener(new OnFailureListener() {
