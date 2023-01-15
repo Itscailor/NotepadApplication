@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "836721001295",
+    "project_id": "noteapp-98ba4",
+    "storage_bucket": "noteapp-98ba4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836721001295:android:5751e7015c624b094dfb3a",
+        "android_client_info": {
+          "package_name": "com.example.appuntino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836721001295-du9q4jshfkd4ei2788fnm14qnmvf0lk8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA8d-rfP6oc5n1J0Fu1eB0qk0EgT2C-ZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836721001295-du9q4jshfkd4ei2788fnm14qnmvf0lk8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -37,7 +37,7 @@
 
         </LinearLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/centerLine"
@@ -53,9 +53,9 @@
             android:inputType="textEmailAddress"/>
 
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/centerLine"
@@ -70,7 +70,7 @@
             android:id="@+id/loginpassword"
             android:hint="Password"
             android:inputType="textPassword"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
