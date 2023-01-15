@@ -4,39 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".singup">
 
     <RelativeLayout
         android:id="@+id/centerLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
-
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_above="@id/centerLine"
+        android:layout_marginBottom="150dp"
+        android:orientation="vertical">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_above="@id/centerLine"
-            android:layout_marginBottom="150dp"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Benvenuto!"
-                android:textSize="42sp"
-                android:textColor="@color/teal_700"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Accedi per continuare"
-                android:textSize="23sp"/>
+            android:text="Registrazione"
+            android:textSize="42sp"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Benvenuto"
+            android:textSize="23sp"/>
 
 
-        </LinearLayout>
-
+    </LinearLayout>
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,10 +45,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/loginemail"
+            android:id="@+id/signupemail"
             android:hint="Email"
             android:inputType="textEmailAddress"/>
-
 
     </android.support.design.widget.TextInputLayout>
 
@@ -67,41 +63,29 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/loginpassword"
+            android:id="@+id/signuppassword"
             android:hint="Password"
             android:inputType="textPassword"/>
     </android.support.design.widget.TextInputLayout>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
-    android:id="@+id/Loginbutton"
-    android:layout_below="@id/password"
-    android:text="Accedi"
-    android:backgroundTint="@color/button_background_color"
-    />
-
-    <TextView
-        android:id="@+id/nonseiid"
-        android:layout_width="381dp"
-        android:layout_height="20dp"
-        android:layout_below="@id/Loginbutton"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Non sei registrato?"
-        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:id="@+id/Registerbutton"
-        android:layout_below="@id/nonseiid"
+        android:id="@+id/Signupbutton"
+        android:layout_below="@id/password"
         android:text="Registrati"
         android:backgroundTint="@color/button_background_color"
         />
-</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Torna alla pagina di login"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/Signupbutton"/>
 
+
+</RelativeLayout>
