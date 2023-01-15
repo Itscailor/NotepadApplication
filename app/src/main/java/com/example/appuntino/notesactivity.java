@@ -89,7 +89,7 @@ public class notesactivity extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent intent=new Intent(view.getContext(),editnoteactivity.class);
                         intent.putExtra("title",firebasemodel.getTitle());
-                        intent.putExtra("conent",firebasemodel.getContent());
+                        intent.putExtra("content",firebasemodel.getContent());
                         intent.putExtra("noteID",docID);
                         view.getContext().startActivity(intent);
 

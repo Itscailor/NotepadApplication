@@ -30,8 +30,10 @@
         android:textColor="@color/black"
         android:layout_below="@id/toolbarnotedetail"
         android:padding="15dp"
-        android:id="@+id/contentnotedetail"
-        />
+        android:id="@+id/contentnotedetail">
+        
+    </TextView>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
