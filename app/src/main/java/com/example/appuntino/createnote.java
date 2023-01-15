@@ -36,11 +36,12 @@ FirebaseFirestore firebaseFirestore;
         setContentView(R.layout.activity_createnote);
 
         savenotebutt=findViewById(R.id.savenotefab);
-       createtitleofnotebutt=findViewById(R.id.createtitlenote);
+        createtitleofnotebutt=findViewById(R.id.createtitlenote);
         createcontentofnotebutt=findViewById(R.id.createcontentnote);
         Toolbar toolbar = findViewById(R.id.toolbarcreatenote);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         firebaseAuth = firebaseAuth.getInstance();
         firebaseFirestore=firebaseFirestore.getInstance();
         firebaseUser=firebaseAuth.getInstance().getCurrentUser();

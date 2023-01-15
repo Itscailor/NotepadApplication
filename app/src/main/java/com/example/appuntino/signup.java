@@ -30,6 +30,7 @@ public class signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singup);
         getSupportActionBar().hide();
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         signupemail=findViewById(R.id.signupemail);
         signuppass=findViewById(R.id.signuppassword);
         signup=findViewById(R.id.Signupbutton);

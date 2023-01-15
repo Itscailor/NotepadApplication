@@ -59,6 +59,7 @@ public class notesactivity extends AppCompatActivity {
         firebaseFirestore=firebaseFirestore.getInstance();
 
         getSupportActionBar().setTitle("Note");
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
 
         createnotebutt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +108,7 @@ public class notesactivity extends AppCompatActivity {
                             public boolean onMenuItemClick(MenuItem menuItem) {
                                 Intent intent=new Intent(view.getContext(),editnoteactivity.class);
                                 intent.putExtra("title",firebasemodel.getTitle());
-                                intent.putExtra("conent",firebasemodel.getContent());
+                                intent.putExtra("content",firebasemodel.getContent());
                                 intent.putExtra("noteID",docID);
                                 view.getContext().startActivity(intent);
                                 return false;

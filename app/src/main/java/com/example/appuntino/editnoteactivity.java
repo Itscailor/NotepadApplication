@@ -47,6 +47,7 @@ public class editnoteactivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbareditnote);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
 
         msaveedit.setOnClickListener(new View.OnClickListener() {
             @Override

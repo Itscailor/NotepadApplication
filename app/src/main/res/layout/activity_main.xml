@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@color/white"
     >
 
     <RelativeLayout
@@ -32,6 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Accedi per continuare"
+                android:textColor="@color/black"
                 android:textSize="23sp"/>
 
 
@@ -50,6 +52,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/loginemail"
             android:hint="Email"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:background="@color/white"
             android:inputType="textEmailAddress"/>
 
 
@@ -69,6 +74,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/loginpassword"
             android:hint="Password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:background="@color/white"
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 <Button
@@ -92,6 +100,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:text="Non sei registrato?"
+        android:textColor="@color/black"
         />
     <Button
         android:layout_width="match_parent"

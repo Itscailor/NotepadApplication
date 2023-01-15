@@ -28,6 +28,7 @@ public class notedetails extends AppCompatActivity {
         titlenoteedit=findViewById(R.id.titlenotedetail);
         gotoeditnote=findViewById(R.id.gotoedit);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
         Intent data=getIntent();
         gotoeditnote.setOnClickListener(new View.OnClickListener() {
             @Override
