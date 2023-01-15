@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -16,10 +17,13 @@ public class notedetails extends AppCompatActivity {
     private TextView titlenoteedit;
     FloatingActionButton gotoeditnote;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notedetails);
+        Toolbar toolbar = findViewById(R.id.toolbarnotedetail);
+        setSupportActionBar(toolbar);
         contentnoteedit=findViewById(R.id.contentnotedetail);
         titlenoteedit=findViewById(R.id.titlenotedetail);
         gotoeditnote=findViewById(R.id.gotoedit);

@@ -8,7 +8,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbareditnode"
+        android:id="@+id/toolbareditnote"
         android:background="@color/white">
         <EditText
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
         android:textSize="15sp"
         android:gravity="top|left"
         android:textColor="@color/black"
-        android:layout_below="@id/toolbareditnode"
+        android:layout_below="@id/toolbareditnote"
         android:padding="15dp"
         android:id="@+id/editcontent"
         />

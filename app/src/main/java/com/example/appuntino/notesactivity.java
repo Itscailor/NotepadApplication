@@ -125,7 +125,7 @@ public class notesactivity extends AppCompatActivity {
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(getApplicationContext(), "Cancellazione fallita", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Eliminazione fallita", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                                 return false;
@@ -146,7 +146,6 @@ public class notesactivity extends AppCompatActivity {
         };
 
         mrecyclerView= findViewById(R.id.recyclerview);
-        mrecyclerView.setHasFixedSize(true);
         staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         mrecyclerView.setLayoutManager(staggeredGridLayoutManager);
         mrecyclerView.setAdapter(noteAdapter);
