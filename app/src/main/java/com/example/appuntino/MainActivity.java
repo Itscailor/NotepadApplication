@@ -27,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         getSupportActionBar().hide();
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
@@ -40,15 +42,19 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth=FirebaseAuth.getInstance();
         FirebaseUser firebaseUser= firebaseAuth.getCurrentUser();
         if(firebaseUser!=null){
-            finish();
             startActivity(new Intent(MainActivity.this,notesactivity.class));
+            finish();
         }
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,signup.class));
+                finish();
             }
+
         });
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 CheckMailVerification();
                             }else{
-                                Toast.makeText(getApplicationContext(),"Account non esistente",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"credenziali errate",Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -80,11 +86,17 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
         if(firebaseUser.isEmailVerified()==true){
             Toast.makeText(getApplicationContext(),"Accesso effettuato",Toast.LENGTH_SHORT).show();
-            finish();
             startActivity(new Intent(MainActivity.this,notesactivity.class));
+            finish();
         }else {
             Toast.makeText(getApplicationContext(),"Verifica la tua email per continuare",Toast.LENGTH_SHORT).show();
             firebaseAuth.signOut();
         }
     }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        finishAffinity();
+    }
+
 }
